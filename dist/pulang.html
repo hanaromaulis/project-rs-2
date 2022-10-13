@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+	<script src="assets/js/jquery.js"></script>
+</head>
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Informasi Kamar Pasien</a>
+		<button type="button1" class="btn btn-1">Save</button>
+		<!-- Navbar Search-->
+		
+		<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+			<div class="input-group-append">
+			</div>
+		</form>
+		
+		<!-- Navbar-->
+		<ul class="navbar-nav ml-auto ml-md-0">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+					<a class="dropdown-item" href="#">Settings</a>
+					<a class="dropdown-item" href="#">Activity Log</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="login.html">Logout</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	
+		<div id="layoutSidenav_content">
+			<main>
+
+
+				<div class="card mb-4">
+					<div class="card-header">
+
+						<i class="fas fa-table mr-1"></i>
+						DataTable Example	
+						<button type="button1" color="red" class="btn btn-1">Save</button>
+
+
+
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+									<legend align="center" class="text-success"></legend> <form class="form-horizontal" action="" method="post">
+
+									<thead>
+										<tr>
+											<th>Ruang</th>
+											<th>
+												<div class="btn-group">
+													<button type="button1" class="btn btn-2">Pulang</button>
+													<button type ="button1" class="btn btn-2 dropdown-toggle" data-toggle="dropdown">
+														<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="indexadmin.html">Baru</a></li>
+														<li><a href="lama.html">Lama</a></li>
+														<li class="divider"></li>
+													</ul>
+												</div>
+											</th>
+											<th>
+												<div class="btn-group">
+													<button type="button2" class="btn btn-3">Pria</button>
+													<button type ="button2" class="btn btn-3 dropdown-toggle" data-toggle="dropdown">
+														<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="#">Wanita</a></li>
+														<li class="divider"></li>
+													</ul>
+												</div>
+											</th>
+											<th>
+												<div class="btn-group">
+													<button type="button3" class="btn btn-4">UMUM</button>
+													<button type ="button3" class="btn btn-4 dropdown-toggle" data-toggle="dropdown">
+														<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu" role="menu">
+														<li><a href="#">JAMDA</a></li>
+														<li><a href="#">BPJS</a></li>
+														<li class="divider"></li>
+													</ul>
+												</div>
+											</th>
+											<th>Jumlah Total Kamar</th>
+
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<th>Ruang</th>
+											<th>Pulang</th>
+											<th>Pria/Wanita</th>
+											<th>UMUM/JAMDA/BPJS</th>
+											<th>Jumlah Total Kamar</th>
+
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr>
+											<td>Tulip I</td>
+											
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Tulip II</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama1" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki1" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM1" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total1" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Tulip KOHORT</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama2" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki2" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM2" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total2" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Tulip Observasi</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama3" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki3" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM3" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total3" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Lavender II</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama4" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki4" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM4" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total4" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Lavender III</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama5" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki5" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM5" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total5" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Lavender Kohort</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama6" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki6" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM6" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total6" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Begonia VIP</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama7" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki7" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM7" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total7" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Begonia I</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama8" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki8" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM8" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total8" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>ICU Biasa</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama9" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki9" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM9" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total9" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>ICU Isolasi</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama10" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki10" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM10" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total10" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Azzalea Incubator</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama11" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki11" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM11" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total11" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Azzalea TT Bayi</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama12" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki12" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM12" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total12" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Jasmine I</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama13" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki13" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM13" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total13" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Jasmine II</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama14" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki14" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM14" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total14" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+										<tr>
+											<td>Jasmine III</td>
+											<td> <div class="form-group"><label class="col-lg-3">
+												<div class="col-lg-3"> <input type="number" step="any" min="0" name="Lama" id="Lama15" class="form-control" value="0"></div> </td> 
+											
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="Laki" id="Laki15" class="form-control" value="0"></div> </td>
+											
+
+											<td> <div class="col-lg-3"> <input type="number" step="any" min="0" name="UMUM" id="UMUM15" class="form-control" value="0"></div></td>
+											
+											<td><div class="col-lg-3"><input type="number" name="total" id="total15" class="form-control" Readonly value="0"></div></td></label></div>
+
+										</tr>
+
+
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid">
+					<div class="d-flex align-items-center justify-content-between small">
+
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+	<script src="assets/demo/chart-area-demo.js"></script>
+	<script src="assets/demo/chart-bar-demo.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+	<script src="assets/demo/datatables-demo.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+ $("#Lama").keyup(function(){   
+   var a = parseFloat($("#Lama").val());
+   var b = parseFloat($("#Laki").val());
+   var c = parseFloat($("#UMUM").val());
+   var d = a+b+c;
+   $("#total").val(d);
+ });
+ 
+  $("#Laki").keyup(function(){   
+   var a = parseFloat($("#Lama").val());
+   var b = parseFloat($("#Laki").val());
+   var c = parseFloat($("#UMUM").val());
+   var d = a+b+c;
+   $("#total").val(d);
+ });
+
+   $("#UMUM").keyup(function(){   
+   var a = parseFloat($("#Lama").val());
+   var b = parseFloat($("#Laki").val());
+   var c = parseFloat($("#UMUM").val());
+   var d = a+b+c;
+   $("#total").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama1").keyup(function(){   
+   var a = parseFloat($("#Lama1").val());
+   var b = parseFloat($("#Laki1").val());
+   var c = parseFloat($("#UMUM1").val());
+   var d = a+b+c;
+   $("#total1").val(d);
+ });
+ 
+  $("#Laki1").keyup(function(){   
+   var a = parseFloat($("#Lama1").val());
+   var b = parseFloat($("#Laki1").val());
+   var c = parseFloat($("#UMUM1").val());
+   var d = a+b+c;
+   $("#total1").val(d);
+ });
+
+   $("#UMUM1").keyup(function(){   
+   var a = parseFloat($("#Lama1").val());
+   var b = parseFloat($("#Laki1").val());
+   var c = parseFloat($("#UMUM1").val());
+   var d = a+b+c;
+   $("#total1").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama2").keyup(function(){   
+   var a = parseFloat($("#Lama2").val());
+   var b = parseFloat($("#Laki2").val());
+   var c = parseFloat($("#UMUM2").val());
+   var d = a+b+c;
+   $("#total2").val(d);
+ });
+ 
+  $("#Laki2").keyup(function(){   
+   var a = parseFloat($("#Lama2").val());
+   var b = parseFloat($("#Laki2").val());
+   var c = parseFloat($("#UMUM2").val());
+   var d = a+b+c;
+   $("#total2").val(d);
+ });
+
+   $("#UMUM2").keyup(function(){   
+   var a = parseFloat($("#Lama2").val());
+   var b = parseFloat($("#Laki2").val());
+   var c = parseFloat($("#UMUM2").val());
+   var d = a+b+c;
+   $("#total2").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama3").keyup(function(){   
+   var a = parseFloat($("#Lama3").val());
+   var b = parseFloat($("#Laki3").val());
+   var c = parseFloat($("#UMUM3").val());
+   var d = a+b+c;
+   $("#total3").val(d);
+ });
+ 
+  $("#Laki3").keyup(function(){   
+   var a = parseFloat($("#Lama3").val());
+   var b = parseFloat($("#Laki3").val());
+   var c = parseFloat($("#UMUM3").val());
+   var d = a+b+c;
+   $("#total3").val(d);
+ });
+
+   $("#UMUM3").keyup(function(){   
+   var a = parseFloat($("#Lama3").val());
+   var b = parseFloat($("#Laki3").val());
+   var c = parseFloat($("#UMUM3").val());
+   var d = a+b+c;
+   $("#total3").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama4").keyup(function(){   
+   var a = parseFloat($("#Lama4").val());
+   var b = parseFloat($("#Laki4").val());
+   var c = parseFloat($("#UMUM4").val());
+   var d = a+b+c;
+   $("#total4").val(d);
+ });
+ 
+  $("#Laki4").keyup(function(){   
+   var a = parseFloat($("#Lama4").val());
+   var b = parseFloat($("#Laki4").val());
+   var c = parseFloat($("#UMUM4").val());
+   var d = a+b+c;
+   $("#total4").val(d);
+ });
+
+   $("#UMUM4").keyup(function(){   
+   var a = parseFloat($("#Lama4").val());
+   var b = parseFloat($("#Laki4").val());
+   var c = parseFloat($("#UMUM4").val());
+   var d = a+b+c;
+   $("#total4").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama5").keyup(function(){   
+   var a = parseFloat($("#Lama5").val());
+   var b = parseFloat($("#Laki5").val());
+   var c = parseFloat($("#UMUM5").val());
+   var d = a+b+c;
+   $("#total5").val(d);
+ });
+ 
+  $("#Laki5").keyup(function(){   
+   var a = parseFloat($("#Lama5").val());
+   var b = parseFloat($("#Laki5").val());
+   var c = parseFloat($("#UMUM5").val());
+   var d = a+b+c;
+   $("#total5").val(d);
+ });
+
+   $("#UMUM5").keyup(function(){   
+   var a = parseFloat($("#Lama5").val());
+   var b = parseFloat($("#Laki5").val());
+   var c = parseFloat($("#UMUM5").val());
+   var d = a+b+c;
+   $("#total5").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama6").keyup(function(){   
+   var a = parseFloat($("#Lama6").val());
+   var b = parseFloat($("#Laki6").val());
+   var c = parseFloat($("#UMUM6").val());
+   var d = a+b+c;
+   $("#total6").val(d);
+ });
+ 
+  $("#Laki6").keyup(function(){   
+   var a = parseFloat($("#Lama6").val());
+   var b = parseFloat($("#Laki6").val());
+   var c = parseFloat($("#UMUM6").val());
+   var d = a+b+c;
+   $("#total6").val(d);
+ });
+
+   $("#UMUM6").keyup(function(){   
+   var a = parseFloat($("#Lama6").val());
+   var b = parseFloat($("#Laki6").val());
+   var c = parseFloat($("#UMUM6").val());
+   var d = a+b+c;
+   $("#total6").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama7").keyup(function(){   
+   var a = parseFloat($("#Lama7").val());
+   var b = parseFloat($("#Laki7").val());
+   var c = parseFloat($("#UMUM7").val());
+   var d = a+b+c;
+   $("#total7").val(d);
+ });
+ 
+  $("#Laki7").keyup(function(){   
+   var a = parseFloat($("#Lama7").val());
+   var b = parseFloat($("#Laki7").val());
+   var c = parseFloat($("#UMUM7").val());
+   var d = a+b+c;
+   $("#total7").val(d);
+ });
+
+   $("#UMUM7").keyup(function(){   
+   var a = parseFloat($("#Lama7").val());
+   var b = parseFloat($("#Laki7").val());
+   var c = parseFloat($("#UMUM7").val());
+   var d = a+b+c;
+   $("#total7").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama8").keyup(function(){   
+   var a = parseFloat($("#Lama8").val());
+   var b = parseFloat($("#Laki8").val());
+   var c = parseFloat($("#UMUM8").val());
+   var d = a+b+c;
+   $("#total8").val(d);
+ });
+ 
+  $("#Laki8").keyup(function(){   
+   var a = parseFloat($("#Lama8").val());
+   var b = parseFloat($("#Laki8").val());
+   var c = parseFloat($("#UMUM8").val());
+   var d = a+b+c;
+   $("#total8").val(d);
+ });
+
+   $("#UMUM8").keyup(function(){   
+   var a = parseFloat($("#Lama8").val());
+   var b = parseFloat($("#Laki8").val());
+   var c = parseFloat($("#UMUM8").val());
+   var d = a+b+c;
+   $("#tota8").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama9").keyup(function(){   
+   var a = parseFloat($("#Lama9").val());
+   var b = parseFloat($("#Laki9").val());
+   var c = parseFloat($("#UMUM9").val());
+   var d = a+b+c;
+   $("#total9").val(d);
+ });
+ 
+  $("#Laki9").keyup(function(){   
+   var a = parseFloat($("#Lama9").val());
+   var b = parseFloat($("#Laki9").val());
+   var c = parseFloat($("#UMUM9").val());
+   var d = a+b+c;
+   $("#total9").val(d);
+ });
+
+   $("#UMUM9").keyup(function(){   
+   var a = parseFloat($("#Lama9").val());
+   var b = parseFloat($("#Laki9").val());
+   var c = parseFloat($("#UMUM9").val());
+   var d = a+b+c;
+   $("#total9").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama10").keyup(function(){   
+   var a = parseFloat($("#Lama10").val());
+   var b = parseFloat($("#Laki10").val());
+   var c = parseFloat($("#UMUM10").val());
+   var d = a+b+c;
+   $("#total0").val(d);
+ });
+ 
+  $("#Laki10").keyup(function(){   
+   var a = parseFloat($("#Lama10").val());
+   var b = parseFloat($("#Laki10").val());
+   var c = parseFloat($("#UMUM10").val());
+   var d = a+b+c;
+   $("#total10").val(d);
+ });
+
+   $("#UMUM10").keyup(function(){   
+   var a = parseFloat($("#Lama10").val());
+   var b = parseFloat($("#Laki10").val());
+   var c = parseFloat($("#UMUM10").val());
+   var d = a+b+c;
+   $("#total10").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama11").keyup(function(){   
+   var a = parseFloat($("#Lama11").val());
+   var b = parseFloat($("#Laki11").val());
+   var c = parseFloat($("#UMUM11").val());
+   var d = a+b+c;
+   $("#total11").val(d);
+ });
+ 
+  $("#Laki11").keyup(function(){   
+   var a = parseFloat($("#Lama11").val());
+   var b = parseFloat($("#Laki11").val());
+   var c = parseFloat($("#UMUM11").val());
+   var d = a+b+c;
+   $("#total11").val(d);
+ });
+
+   $("#UMUM11").keyup(function(){   
+   var a = parseFloat($("#Lama11").val());
+   var b = parseFloat($("#Laki11").val());
+   var c = parseFloat($("#UMUM11").val());
+   var d = a+b+c;
+   $("#total11").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama12").keyup(function(){   
+   var a = parseFloat($("#Lama12").val());
+   var b = parseFloat($("#Laki12").val());
+   var c = parseFloat($("#UMUM12").val());
+   var d = a+b+c;
+   $("#total12").val(d);
+ });
+ 
+  $("#Laki12").keyup(function(){   
+   var a = parseFloat($("#Lama2").val());
+   var b = parseFloat($("#Laki12").val());
+   var c = parseFloat($("#UMUM12").val());
+   var d = a+b+c;
+   $("#total12").val(d);
+ });
+
+   $("#UMUM2").keyup(function(){   
+   var a = parseFloat($("#Lama12").val());
+   var b = parseFloat($("#Laki12").val());
+   var c = parseFloat($("#UMUM12").val());
+   var d = a+b+c;
+   $("#total12").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama13").keyup(function(){   
+   var a = parseFloat($("#Lama13").val());
+   var b = parseFloat($("#Laki13").val());
+   var c = parseFloat($("#UMUM13").val());
+   var d = a+b+c;
+   $("#total13").val(d);
+ });
+ 
+  $("#Laki13").keyup(function(){   
+   var a = parseFloat($("#Lama13").val());
+   var b = parseFloat($("#Laki13").val());
+   var c = parseFloat($("#UMUM13").val());
+   var d = a+b+c;
+   $("#total13").val(d);
+ });
+
+   $("#UMUM13").keyup(function(){   
+   var a = parseFloat($("#Lama13").val());
+   var b = parseFloat($("#Laki13").val());
+   var c = parseFloat($("#UMUM13").val());
+   var d = a+b+c;
+   $("#total13").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama14").keyup(function(){   
+   var a = parseFloat($("#Lama14").val());
+   var b = parseFloat($("#Laki14").val());
+   var c = parseFloat($("#UMUM14").val());
+   var d = a+b+c;
+   $("#total14").val(d);
+ });
+ 
+  $("#Laki14").keyup(function(){   
+   var a = parseFloat($("#Lama14").val());
+   var b = parseFloat($("#Laki14").val());
+   var c = parseFloat($("#UMUM14").val());
+   var d = a+b+c;
+   $("#total14").val(d);
+ });
+
+   $("#UMUM14").keyup(function(){   
+   var a = parseFloat($("#Lama14").val());
+   var b = parseFloat($("#Laki14").val());
+   var c = parseFloat($("#UMUM14").val());
+   var d = a+b+c;
+   $("#total14").val(d);
+ });
+
+</script>
+
+<script type="text/javascript">
+ $("#Lama15").keyup(function(){   
+   var a = parseFloat($("#Lama15").val());
+   var b = parseFloat($("#Laki15").val());
+   var c = parseFloat($("#UMUM15").val());
+   var d = a+b+c;
+   $("#total15").val(d);
+ });
+ 
+  $("#Laki15").keyup(function(){   
+   var a = parseFloat($("#Lama15").val());
+   var b = parseFloat($("#Laki15").val());
+   var c = parseFloat($("#UMUM15").val());
+   var d = a+b+c;
+   $("#total15").val(d);
+ });
+
+   $("#UMUM15").keyup(function(){   
+   var a = parseFloat($("#Lama15").val());
+   var b = parseFloat($("#Laki15").val());
+   var c = parseFloat($("#UMUM15").val());
+   var d = a+b+c;
+   $("#total15").val(d);
+ });
+
+</script>
